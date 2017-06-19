@@ -1,0 +1,19 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+					xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+	<sys:String x:Key="FirstName">First Name</sys:String>
+	<sys:String x:Key="LastName">Last Name</sys:String>
+	<sys:String x:Key="Address">Address</sys:String>
+	<sys:String x:Key="Address2">Address 2</sys:String>
+	<sys:String x:Key="City">City</sys:String>
+	<sys:String x:Key="State">State</sys:String>
+	<sys:String x:Key="PostalCode">Zip Code</sys:String>
+	<sys:String x:Key="VacationDays">Vacation Days</sys:String>
+	<sys:String x:Key="StartDate">Start Date</sys:String>
+	<sys:String x:Key="CompanyName">Name</sys:String>
+
+	<sys:String x:Key="InvalidUsernamePassword">Username is incorrect or the password does not match!</sys:String>
+	<sys:String x:Key="InvalidEmail">That does not appear to be a real email address!</sys:String>
+	<sys:String x:Key="CompanyExists">A company with that name already exists!</sys:String>
+</ResourceDictionary>

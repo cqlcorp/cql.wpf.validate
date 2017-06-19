@@ -1,0 +1,19 @@
+﻿{
+	"viewConfigs": [
+		{
+			"name": "Login",
+			"fields": [
+				{
+					"name": "Username",
+					"isRequired": true,
+					"maxLength": 50
+
+				},
+				{
+					"name": "Password",
+					"isRequired": true
+				}
+			]
+		}
+	]
+}

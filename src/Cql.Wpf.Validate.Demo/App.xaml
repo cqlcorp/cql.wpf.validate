@@ -1,0 +1,19 @@
+﻿<Application x:Class="Cql.Wpf.Validate.Demo.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:converters="clr-namespace:Cql.Wpf.Validate.Demo.Converters"
+             StartupUri="Views/MainWindow.xaml">
+	<Application.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="pack://application:,,,/Cql.Wpf.Validate.Demo;component/Styles/GlobalStyles.xaml"/>
+				<ResourceDictionary Source="pack://application:,,,/Cql.Wpf.Validate.Demo;component/Resources/en.xaml"/>
+				<ResourceDictionary>
+					<converters:NullToVisibilityConverter x:Key="NullToVisibilityConverter"/>
+					<converters:NotNullToVisibilityConverter x:Key="NotNullToVisibilityConverter"/>
+					<converters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+				</ResourceDictionary>
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</Application.Resources>
+</Application>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>cql.wpf.validate</id>
+    <version>$version$</version>
+    <title>cql.wpf.validate</title>
+    <authors>joel-devries</authors>
+    <owners>joel-devries</owners>
+    <licenseUrl>https://github.com/cqlcorp/cql.wpf.validate/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/cqlcorp/cql.wpf.validate</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Straight forward and highly configurable validation for WPF applications.</description>
+    <copyright>Copyright 2017</copyright>
+    <tags>WPF Validation</tags>
+  </metadata>
+      <files>
+        <file src="content\config.sample.json" target="config.sample.json" />
+    </files>
+</package>

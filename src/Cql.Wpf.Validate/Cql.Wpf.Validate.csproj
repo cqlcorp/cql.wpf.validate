@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FE243559-D702-40E1-8B2D-7FA6077FFA56}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cql.Wpf.Validate</RootNamespace>
+    <AssemblyName>Cql.Wpf.Validate</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Config\ValidationConfig.cs" />
+    <Compile Include="Config\DynamicDate.cs" />
+    <Compile Include="Config\FieldConfig.cs" />
+    <Compile Include="IConfigProvider.cs" />
+    <Compile Include="Config\JsonFileConfigProvider.cs" />
+    <Compile Include="Config\ViewConfig.cs" />
+    <Compile Include="Extensions\DependencyObjectExtensions.cs" />
+    <Compile Include="IModelValidator.cs" />
+    <Compile Include="IMessageProvider.cs" />
+    <Compile Include="ModelValidator.cs" />
+    <Compile Include="Text\ApplicationResourcesMessageProvider.cs" />
+    <Compile Include="ValidationContext.cs" />
+    <Compile Include="ValidationMessage.cs" />
+    <Compile Include="ValidationSet.cs" />
+    <Compile Include="Validators\DynamicDateRangeValidator.cs" />
+    <Compile Include="ViewModel\FieldConfigViewModel.cs" />
+    <Compile Include="ModelValidationResult.cs" />
+    <Compile Include="ViewModel\ViewConfigViewModel.cs" />
+    <Compile Include="UI\ViewValidatorControl.cs" />
+    <Compile Include="Validators\CustomValidator.cs" />
+    <Compile Include="Validators\IValidator.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Validators\LengthValidator.cs" />
+    <Compile Include="Validators\RangeValidator.cs" />
+    <Compile Include="Validators\RegexValidator.cs" />
+    <Compile Include="Validators\RequiredValidator.cs" />
+    <Compile Include="Validators\ValidationResult.cs" />
+    <Compile Include="UI\FieldValidatorControl.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="content\config.sample.json" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Resources\default.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
