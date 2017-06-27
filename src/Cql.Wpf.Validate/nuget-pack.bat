@@ -1,0 +1,1 @@
+nuget pack Cql.Wpf.Validate.csproj -properties Configuration=Release
