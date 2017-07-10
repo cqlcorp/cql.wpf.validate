@@ -7,39 +7,33 @@ namespace Cql.Wpf.Validate.Tests
     [TestClass]
     public class LengthValidatorTests
     {
-        private string testString1 = "hi";
-        private string testString2 = "hello";
-        private string testString3 = "goodbye";
-        private string zeroString = "";
-        private string nullString = null;
-        private LengthValidator maxValidator = new LengthValidator(5, true);
-        private LengthValidator minValidator = new LengthValidator(5, false);
-        private LengthValidator zeroMaxValidator = new LengthValidator(0, true);
-        private LengthValidator zeroMinValidator = new LengthValidator(0, false);
-
         #region Max
         [TestMethod]
         public void Length_ValidateMax_UnderValidLength()
         {
-            Assert.IsTrue(maxValidator.Validate(testString1).IsValid);
+            LengthValidator maxValidator = new LengthValidator(5, true);
+            Assert.IsTrue(maxValidator.Validate("hi").IsValid);
         }
 
         [TestMethod]
         public void Length_ValidateMax_AtValidLength()
         {
-            Assert.IsTrue(maxValidator.Validate(testString2).IsValid);
+            LengthValidator maxValidator = new LengthValidator(5, true);
+            Assert.IsTrue(maxValidator.Validate("hello").IsValid);
         }
 
         [TestMethod]
         public void Length_ValidateMax_OverValidLength()
         {
-            Assert.IsFalse(maxValidator.Validate(testString3).IsValid);
+            LengthValidator maxValidator = new LengthValidator(5, true);
+            Assert.IsFalse(maxValidator.Validate("goodbye").IsValid);
         }
 
         [TestMethod]
         public void Length_ValidateMax_NullValidLength()
         {
-            Assert.IsTrue(maxValidator.Validate(nullString).IsValid);
+            LengthValidator maxValidator = new LengthValidator(5, true);
+            Assert.IsTrue(maxValidator.Validate(null).IsValid);
         }
         #endregion
 
@@ -47,25 +41,29 @@ namespace Cql.Wpf.Validate.Tests
         [TestMethod]
         public void Length_ValidateMin_UnderValidLength()
         {
-            Assert.IsFalse(minValidator.Validate(testString1).IsValid);
+            LengthValidator minValidator = new LengthValidator(5, false);
+            Assert.IsFalse(minValidator.Validate("hi").IsValid);
         }
 
         [TestMethod]
         public void Length_ValidateMin_AtValidLength()
         {
-            Assert.IsTrue(minValidator.Validate(testString2).IsValid);
+            LengthValidator minValidator = new LengthValidator(5, false);
+            Assert.IsTrue(minValidator.Validate("hello").IsValid);
         }
 
         [TestMethod]
         public void Length_ValidateMin_OverValidLength()
         {
-            Assert.IsTrue(minValidator.Validate(testString3).IsValid);
+            LengthValidator minValidator = new LengthValidator(5, false);
+            Assert.IsTrue(minValidator.Validate("goodbye").IsValid);
         }
 
         [TestMethod]
         public void Length_ValidateMin_NullValidLength()
         {
-            Assert.IsTrue(minValidator.Validate(nullString).IsValid);
+            LengthValidator minValidator = new LengthValidator(5, false);
+            Assert.IsTrue(minValidator.Validate(null).IsValid);
         }
         #endregion
 
@@ -73,13 +71,15 @@ namespace Cql.Wpf.Validate.Tests
         [TestMethod]
         public void Length_ValidateZeroMax_AtValidLength()
         {
-            Assert.IsTrue(zeroMaxValidator.Validate(zeroString).IsValid);
+            LengthValidator zeroMaxValidator = new LengthValidator(0, true);
+            Assert.IsTrue(zeroMaxValidator.Validate("").IsValid);
         }
 
         [TestMethod]
         public void Length_ValidateZeroMax_OverValidLength()
         {
-            Assert.IsFalse(zeroMaxValidator.Validate(testString3).IsValid);
+            LengthValidator zeroMaxValidator = new LengthValidator(0, true);
+            Assert.IsFalse(zeroMaxValidator.Validate("goodbye").IsValid);
         }
         #endregion
 
@@ -87,13 +87,15 @@ namespace Cql.Wpf.Validate.Tests
         [TestMethod]
         public void Length_ValidateZeroMin_AtValidLength()
         {
-            Assert.IsTrue(zeroMinValidator.Validate(zeroString).IsValid);
+            LengthValidator zeroMinValidator = new LengthValidator(0, false);
+            Assert.IsTrue(zeroMinValidator.Validate("").IsValid);
         }
 
         [TestMethod]
         public void Length_ValidateZeroMin_OverValidLength()
         {
-            Assert.IsTrue(zeroMinValidator.Validate(testString3).IsValid);
+            LengthValidator zeroMinValidator = new LengthValidator(0, false);
+            Assert.IsTrue(zeroMinValidator.Validate("goodbye").IsValid);
         }
         #endregion
     }

@@ -57,6 +57,8 @@
     <Compile Include="RangeValidatorTests.cs" />
     <Compile Include="RegexValidatorTests.cs" />
     <Compile Include="RequiredValidatorTests.cs" />
+    <Compile Include="DynamicDateRangeValidatorTests.cs" />
+    <Compile Include="ModelValidatorTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Cql.Wpf.Validate\Cql.Wpf.Validate.csproj">

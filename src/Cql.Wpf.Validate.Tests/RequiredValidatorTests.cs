@@ -7,35 +7,38 @@ namespace Cql.Wpf.Validate.Tests
     [TestClass]
     public class RequiredValidatorTests
     {
-        private RequiredValidator validator = new RequiredValidator();
-
         [TestMethod]
         public void Required_Validate_NonemptyString()
         {
+            RequiredValidator validator = new RequiredValidator();
             Assert.IsTrue(validator.Validate("notempty").IsValid);
         }
 
         [TestMethod]
         public void Required_Validate_EmptyString()
         {
+            RequiredValidator validator = new RequiredValidator();
             Assert.IsFalse(validator.Validate("").IsValid);
         }
 
         [TestMethod]
         public void Required_Validate_BlankString()
         {
+            RequiredValidator validator = new RequiredValidator();
             Assert.IsFalse(validator.Validate("    ").IsValid);
         }
 
         [TestMethod]
         public void Required_Validate_NonString()
         {
+            RequiredValidator validator = new RequiredValidator();
             Assert.IsTrue(validator.Validate(253).IsValid);
         }
 
         [TestMethod]
         public void Required_Validate_Null()
         {
+            RequiredValidator validator = new RequiredValidator();
             Assert.IsFalse(validator.Validate(null).IsValid);
         }
     }
