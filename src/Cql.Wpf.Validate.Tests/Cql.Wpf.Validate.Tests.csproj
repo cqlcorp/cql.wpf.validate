@@ -70,6 +70,7 @@
     <Compile Include="DynamicDateRangeValidatorTests.cs" />
     <Compile Include="ModelValidatorTests.cs" />
     <Compile Include="Models\TestFieldNameModel.cs" />
+    <Compile Include="JsonFileConfigProviderTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Cql.Wpf.Validate\Cql.Wpf.Validate.csproj">
