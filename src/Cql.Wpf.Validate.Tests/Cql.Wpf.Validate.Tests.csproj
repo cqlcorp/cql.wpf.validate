@@ -35,7 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -53,18 +55,32 @@
   </Choose>
   <ItemGroup>
     <Compile Include="LengthValidatorTests.cs" />
+    <Compile Include="Models\TestNullsModel.cs" />
+    <Compile Include="Models\TestMaxLengthModel.cs" />
+    <Compile Include="Models\TestMultipleFieldsModel.cs" />
+    <Compile Include="Models\TestValidationMessageModel.cs" />
+    <Compile Include="Models\TestRegexModel.cs" />
+    <Compile Include="Models\TestMinMaxLengthModel.cs" />
+    <Compile Include="Models\TestMinLengthModel.cs" />
+    <Compile Include="Models\TestValidateRequiredModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RangeValidatorTests.cs" />
     <Compile Include="RegexValidatorTests.cs" />
     <Compile Include="RequiredValidatorTests.cs" />
     <Compile Include="DynamicDateRangeValidatorTests.cs" />
     <Compile Include="ModelValidatorTests.cs" />
+    <Compile Include="Models\TestFieldNameModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Cql.Wpf.Validate\Cql.Wpf.Validate.csproj">
       <Project>{FE243559-D702-40E1-8B2D-7FA6077FFA56}</Project>
       <Name>Cql.Wpf.Validate</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="config.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
