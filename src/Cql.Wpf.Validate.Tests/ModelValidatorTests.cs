@@ -1,13 +1,7 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Cql.Wpf.Validate;
-using System.Collections.Generic;
-using Cql.Wpf.Validate.Validators;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Cql.Wpf.Validate.ViewModel;
 using System.Threading.Tasks;
-using System.Diagnostics;
 using Cql.Wpf.Validate.Config;
-using System.IO.Packaging;
 using System.Windows;
 
 namespace Cql.Wpf.Validate.Tests
